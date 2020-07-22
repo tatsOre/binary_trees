@@ -14,7 +14,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	height = binary_tree_height(tree);
 	size = (int)binary_tree_size(tree);
-        /* A perfect binary tree of height 'h' has 2exp(h + 1) - 1 node. */
+/* A perfect binary tree of height 'h' has 2exp(h + 1) - 1 node. */
 	return ((1 << (height + 1)) - 1 == size ? 1 : 0);
 }
 
