@@ -3,15 +3,13 @@
 /**
  * binary_trees_ancestor - Finds the lowest common ancestor of two nodes
  * @first: pointer to the first node
- * @second:  pointer to the second node
+ * @second: pointer to the second node
  * Return: pointer to the LCA node of the two given nodes, or NULL on failure
  */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second)
 {
 	int depth_fs, depth_sc;
-	binary_tree_t *fs = (binary_tree_t *)first;
-	binary_tree_t *sc = (binary_tree_t *)second;
 
 	if (!first || !second)
 		return (NULL);
@@ -20,16 +18,15 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	depth_sc = binary_tree_depth(second);
 
 	for ( ; depth_fs > depth_sc; depth_fs--)
-		fs = fs->parent;
-
+		first = first->parent;
 	for ( ; depth_sc > depth_fs; depth_sc--)
-		sc = sc->parent;
-	while (fs && sc)
+		second = second->parent;
+	while (first && second)
 	{
-		if (fs == sc)
-			return (fs);
-		fs = fs->parent;
-		sc = sc->parent;
+		if (first == second)
+			return ((binary_tree_t *)first);
+		first = first->parent;
+		second = second->parent;
 	}
 	return (NULL);
 }
@@ -45,7 +42,6 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
-
 	for ( ; tree->parent ; tree = tree->parent, depth++)
 		;
 	return (depth);
