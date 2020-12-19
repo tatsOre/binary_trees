@@ -10,7 +10,7 @@
 
 ### Resources:
 * [Binary tree](https://en.wikipedia.org/wiki/Binary_tree)
-* [Data Structure and Algorithms - Tree]https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)
+* [Data Structure and Algorithms - Tree](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)
 * [Data Structure & Algorithms - Tree Traversal](https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal.htm)
 * [Binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)
 
